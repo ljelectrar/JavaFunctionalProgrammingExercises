@@ -9,7 +9,7 @@ public class PlayingWithOptional {
 	public static void main(String[] args) {
 		List<String> fruits = List.of("Manga", "Abacate", "Maça", "Banana", "Pêra");
 
-		Predicate<? super String> predicate = fruit -> fruit.startsWith("A");
+		Predicate<? super String> predicate = fruit -> fruit.startsWith("P");
 		
 		Optional<String> fruit = fruits.stream().filter(predicate).findFirst();
 		
@@ -18,7 +18,8 @@ public class PlayingWithOptional {
 		System.out.println(fruit.isPresent());
 		System.out.println(fruit.get());
 		
-		
+		Optional<String> fruitMamão = Optional.of("Mamão");
+		Optional<String> empty = Optional.empty();
 	}
 
 }
